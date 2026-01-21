@@ -59,7 +59,7 @@ deploy_app <- function() {
     cat("Deploying to shinyapps.io...\n")
     deployApp(
       appDir = ".",
-      appName = "vmibaseball",
+      appName = "baylorbaseball",
       forceUpdate = TRUE,
       launch.browser = FALSE,
       logLevel = "verbose"
