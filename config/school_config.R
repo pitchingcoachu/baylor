@@ -139,14 +139,13 @@ school_config <- list(
     "Moseman, Cody"
   ),
   colors = list(
-    primary             = "#000000",   # black from logo
-    accent              = "#ffd619",   # bright yellow highlight
-    accent_secondary    = "#ae122a",   # red gradient stop
+    primary             = "#003015",   # Baylor green from BU logo
+    accent              = "#f5d130",   # Baylor gold highlight
+    accent_secondary    = "#007236",   # complementary green shade
     background          = "#ffffff",   # clean light page base
-    background_secondary= "#f4f4f4"    # subtle off-white
-    
+    background_secondary= "#f3f6f1"    # subtle soft background
   ),
-  logo = "VMIlogo.png",
+  logo = "BUlogo.png",
   coaches_emails = c(
     "crosbyac@vmi.edu"
   ),
