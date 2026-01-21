@@ -121,36 +121,7 @@ school_config <- list(
     "Ruais, RJ"
   ),
   allowed_campers = c(
-    "Bowman, Brock",
-    "Daniels, Tyke",
-    "Pearson, Blake",
-    "Rodriguez, Josiah",
-    "James, Brody",
-    "Nevarez, Matthew",
-    "Nunes, Nolan",
-    "Parks, Jaeden",
-    "Hill, Grant",
-    "McGinnis, Ayden",
-    "Morton, Ryker",
-    "McGuire, John",
-    "Willson, Brandon",
-    "Lauterbach, Camden",
-    "Turnquist, Dylan",
-    "Bournonville, Tanner",
-    "Evans, Lincoln",
-    "Gnirk, Will",
-    "Mann, Tyson",
-    "Neneman, Chase",
-    "Warmus, Joaquin",
-    "Kapadia, Taylor",
-    "Stoner, Timothy",
-    "Bergloff, Cameron",
-    "Hamm, Jacob",
-    "Hofmeister, Ben",
-    "Moo, Eriksen",
-    "Peltz, Zayden",
-    "Huff, Tyler",
-    "Moseman, Cody"
+    "Bowman, Brock"
   ),
   colors = list(
     primary             = "#003015",   # Baylor green from BU logo
@@ -161,7 +132,7 @@ school_config <- list(
   ),
   logo = "BUlogo.png",
   coaches_emails = c(
-    "crosbyac@vmi.edu"
+    "Brian_Furlong@Baylor.edu"
   ),
   notes_api = list(
     base_url = "https://script.google.com/macros/s/AKfycbzJBeHp7OWGsSGKdS9SF4utandq9nhGZEM3dR59SJ9wvHUqE4Kiw6jXWeyHknbp4F_MSA/exec",
