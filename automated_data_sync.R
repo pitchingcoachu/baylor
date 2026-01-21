@@ -32,8 +32,8 @@ if (length(missing_keys) > 0) {
 }
 
 FTP_HOST <- "ftp.trackmanbaseball.com"
-FTP_USER <- "VMI"
-FTP_PASS <- "q7MvFhmAEN"
+FTP_USER <- "Baylor"
+FTP_PASS <- "3g*sLDr#nJ"
 FTP_USERPWD <- paste0(FTP_USER, ":", FTP_PASS)
 
 LOCAL_DATA_DIR      <- "data/"
