@@ -1,46 +1,7 @@
 # School-specific overrides for the shared app.
 # Copy this file to another repo and keep the same structure when you need to customize colors, logos, APIs, etc.
-
-parse_auth_db_config <- function(path = "auth_db_config.yml") {
-  if (!file.exists(path)) return(list())
-  lines <- trimws(readLines(path, warn = FALSE))
-  lines <- lines[lines != "" & !startsWith(lines, "#")]
-  cfg <- list()
-  for (line in lines) {
-    if (!grepl(":", line)) next
-    parts <- strsplit(line, ":", fixed = TRUE)[[1]]
-    key <- trimws(parts[1])
-    value <- trimws(paste(parts[-1], collapse = ":"))
-    cfg[[key]] <- value
-  }
-  cfg
-}
-
-load_neon_config <- function(team_code = "Baylor", yaml_path = "auth_db_config.yml") {
-  yaml_cfg <- parse_auth_db_config(yaml_path)
-  pick <- function(env_name, yaml_key, default = "") {
-    val <- Sys.getenv(env_name, "")
-    if (nzchar(val)) return(val)
-    yval <- yaml_cfg[[yaml_key]]
-    if (!is.null(yval) && nzchar(yval)) return(yval)
-    default
-  }
-
-  list(
-    host = pick("NEON_HOST", "host"),
-    port = pick("NEON_PORT", "port", "5432"),
-    dbname = pick("NEON_DB", "dbname"),
-    user = pick("NEON_USER", "user"),
-    pass = pick("NEON_PASSWORD", "password"),
-    sslmode = pick("NEON_SSLMODE", "sslmode", "require"),
-    schema = pick("NEON_SCHEMA", "schema", "public"),
-    table_prefix = pick("NEON_TABLE_PREFIX", "table_prefix", tolower(team_code))
-  )
-}
-
-default_team_code <- "Baylor"
 school_config <- list(
-  team_code = default_team_code,
+  team_code = "Baylor",
   # Player filters
   allowed_pitchers = c(
     "Perez, Dylan",
@@ -161,7 +122,10 @@ school_config <- list(
   ),
   logo = "BUlogo.png",
   coaches_emails = c(
-    "crosbyac@vmi.edu"
+    "banni17@yahoo.com",
+    "adam.racine@aol.com",
+    "Njcbaseball08@gmail.com",
+    "ahalverson@pitchingcoachu.com"
   ),
   notes_api = list(
     base_url = "https://script.google.com/macros/s/AKfycbzJBeHp7OWGsSGKdS9SF4utandq9nhGZEM3dR59SJ9wvHUqE4Kiw6jXWeyHknbp4F_MSA/exec",
@@ -171,8 +135,7 @@ school_config <- list(
     school_name = "Baylor",
     ftp_folder = "trackman",
     cloudinary_folder = "trackman"
-  ),
-  neon = load_neon_config(team_code = default_team_code)
+  )
 )
 
 colorize_css <- function(css, accent, accent_secondary, background, background_secondary) {
